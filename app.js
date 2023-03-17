@@ -13,9 +13,22 @@ app.use('/img', express.static(__dirname + 'public/img'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
-app.get('', (req, res) => {
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
+app.get('/dashboard', (req, res) => {
     res.render('index')
 })
+
+app.get('/createusers', (req, res) => {
+    res.render('createusers')
+})
+
+app.get('/profile', (req, res) => {
+    res.render('profile')
+})
+
 
 //Listen on port 3000
 app.listen(port, () => console.info('Listening on port ${port}'))

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Titillium Web,sans-serif;
+}
+
+body{
+  
+  background: rgb(75,221,180);
+  background: linear-gradient(145deg, rgba(75,221,180,1) 0%, rgb(7, 2, 28) 83%);
+  filter: blur(0px);
+  z-index: -1;
+  overflow: hidden;
+}
+/* ::selection{
+  background: rgba(0, 0, 0, 0.3);
+} */
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+
+.logo{
+  height: 50px;
+  vertical-align: middle;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: white;
+  border: 2px solid #00ffd0;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  color: #259a79;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+  border: 2px solid #00ffd0;
+  border-top: none;
+  border-radius:0 0 5px 5px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #ffffff;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #000000;
+  font-size: 18px;
+  background: rgb(84, 215, 195);
+  background: linear-gradient(0deg, rgb(26, 218, 218) 0%, rgb(10, 236, 213) 100%);
+  border: 1px solid #51e0c1;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #16a097;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: rgb(84, 215, 195);
+  background: linear-gradient(0deg, rgb(26, 218, 218) 0%, rgb(10, 236, 213) 100%);
+  border: 1px solid #00ffd9;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #55eabb;
+  border: 1px solid #00ffc3;
+  transition: 1s ease;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #06b1a8;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
