@@ -17,9 +17,29 @@ app.get('/login', (req, res) => {
     res.render('login')
 })
 
-app.get('/dashboard', (req, res) => {
-    res.render('index')
+app.get('/signup', (req, res) => {
+    res.render('signup')
 })
+
+app.get('/dashboard', (req, res) => {
+    res.render('dash')
+})
+
+app.get('/dash1', (req, res) => {
+    res.render('dash1')
+})
+
+app.get('/dash2', (req, res) => {
+    res.render('dash2')
+})
+
+app.get('/dash3', (req, res) => {
+    res.render('dash3')
+})
+
+// app.get('/dashboard', (req, res) => {
+//     res.render('index')
+// })
 
 app.get('/createusers', (req, res) => {
     res.render('createusers')
