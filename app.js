@@ -13,6 +13,7 @@ app.use('/img', express.static(__dirname + 'public/img'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
+<<<<<<< HEAD
 app.get('/login', (req, res) => {
     res.render('login')
 })
@@ -48,6 +49,10 @@ app.get('/createusers', (req, res) => {
 app.get('/profile', (req, res) => {
     res.render('profile')
 })
+=======
+const user_routes = require('./router/user')
+app.use(user_routes)
+>>>>>>> d70cb9287cc54c9e8869fa986e0f52accfc994c6
 
 
 //Listen on port 3000
