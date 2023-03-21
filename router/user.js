@@ -9,7 +9,6 @@ router.get('/',general_controller.entry)
 
 router.get('/login', user_controller.login)
 
-router.get('/dashboard', user_controller.dashboard)
 
 router.get('/signup',user_controller.createUser)
 
