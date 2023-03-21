@@ -1,5 +1,11 @@
 exports.entry = (req,res,next)=>{
-    res.render('login.ejs')
+    res.render('login.ejs',{
+        title:'login',
+        err:'',
+        user_name:'',
+        password:''
+
+    })
 }
 
 exports.dashboard = (req,res,next)=>{

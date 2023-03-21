@@ -11,7 +11,7 @@ const userSchema = new Schema({
     type:String,
     require:true
  },
- mail:{
+ email:{
     type:String,
     require:true,
     unique:true
@@ -20,20 +20,47 @@ const userSchema = new Schema({
     type:String,
     require:true
  },
- verification_status:{
+ verified:{
     type:String,
     enum:['Pending','Verified','Rejected'],
     require:true
  },
- college_id:{
-    type:mongoose.Types.ObjectId,
-    ref:'College',
+ collegeId:{
+    type:String,
     require:true
  },
- user_role:{
+ userRole:{
     type:Number,
     require:true,
     enum:[0,1]
+ },
+ state:{
+   type:String,
+   require:true
+ },
+ city:{
+   type:String,
+   require:true
+ },
+ dob:{
+   type:String,
+   require:true
+ },
+ gender:{
+   type:String,
+   enum:['male','female']
+ },
+ status:{
+   type:Boolean,
+   require:true
+ },
+ waLogin:{
+   type:Boolean,
+   require:true
+ },
+ password:{
+   type:String,
+   require:true
  }
 })
 

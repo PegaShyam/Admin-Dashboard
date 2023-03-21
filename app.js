@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-
+const bodyParser = require('body-parser')
 require('dotenv').config();
 const MONGO_URI = process.env.MONGO_URI
 const mongoose = require('mongoose')
@@ -21,6 +21,7 @@ app.use(session({
 }))
 
 //Static Files
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/js', express.static(__dirname + 'public/js'))

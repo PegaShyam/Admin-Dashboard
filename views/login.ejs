@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <title> <%=  title  %>  </title>
   </head>
   <body>
     <div class="container">
       <div class="wrapper">
         <div class="title"><span><img class="logo" src="/img/Sellular Logo.png">SELLULAR&nbsp;&nbsp;</span></div>
-        <form action="#">
+        <form action="/login" method="POST">
                   <div class='light x1'></div>
                   <div class='light x2'></div>
                   <div class='light x3'></div>
@@ -22,11 +23,11 @@
                   <div class='light x9'></div>
           <div class="row">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Email" required>
+            <input type="text" placeholder="user name" name="name" required>
           </div>
           <div class="row">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Password" name="password" required>
           </div>
           <div class="pass"><a href="#">Forgot password?</a></div>
           <div class="row button">

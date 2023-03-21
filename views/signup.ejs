@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible"content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin Dashboard</title>
+	<title> <%= title  %>  </title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/form.css">
@@ -14,7 +14,7 @@
 <body>
 
 			<div class="userform">
-				<form>
+				<form method="POST" action="/signup">
                 <div class="title1"><span><img class="logo1" src="/img/Sellular Logo.png">SELLULAR&nbsp;&nbsp;</span></div>
                 <br>    
                   <div class='light x1'></div>
@@ -27,37 +27,43 @@
                   <div class='light x8'></div>
                   <div class='light x9'></div>
 					<label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter Name">
+                    <input type="text" id="name" name="name" placeholder="Enter Name" required>
                     
 					<label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter Email">
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
                     
 					<label for="dob">Date of Birth</label>
-                    <input type="date" id="dob" placeholder="Enter DOB">
+                    <input type="date" id="dob"  name="dob"  placeholder="Enter DOB" required>
                     
-					<label for="">Phone</label>
-                    <input type="number" maxlength="10" placeholder="Enter Phone Number">
+					<label for="phone">Phone</label>
+                    <input type="text" maxlength="10" id="phone" name="phone" placeholder="Enter Phone Number" required>
+
+					<label for="gender">Institution</label>
+					<select id="gender" name="gender" required>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
                     
-					<label for="">State</label>
-                	<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+					<label for="sts">State</label>
+                	<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="state" class="form-control" required></select>
 					
-					<label for="">City</label>
-					<select id ="state" class="form-control" required></select>	
+					<label for="state">City</label>
+					<select id ="state" name="city" class="form-control" required></select>	
 					
-					<label for="">Institution</label>
-					<select id="college" required>
+					<label for="college">Institution</label>
+					<select id="college" name="college" required>
 						<option value="">Select</option>
 						<option value="NIE">The National Institute of Engineering</option>
 					</select>
 					
-					<label for="">Password</label>
-                    <input type="password" minlength="8" placeholder="Enter Password">
+					<label for="password">Password</label>
+                    <input type="password" name="password" minlength="8" placeholder="Enter Password" required>
                     
-					<label for="">Confirm Password</label>
-                    <input type="password" minlength="8" placeholder="Confirm Password">
+					<label for="confirm">Confirm Password</label>
+                    <input type="password"  id="confirm" name="confirm" minlength="8" placeholder="Confirm Password" required>
                     <br>
 					<br>
-                    <input type="submit" id="but1" value="Sign Up">
+                    <button type="submit" id="but1" >Sign Up</button>
 
                 </form>
             </div>
