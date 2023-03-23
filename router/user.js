@@ -18,6 +18,8 @@ router.get('/signup',user_controller.signup)
 
 router.get('/profile', user_controller.profile)
 
+
+
 router.post('/signup',[
   check('name').custom(async(value,{req})=>{
     let res = await user.find({where:{name:value}})

@@ -8,8 +8,7 @@
 	<title>Admin Dashboard</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/table.css">
-
+    <link rel="stylesheet" href="css/hex.css">
 
 </head>
 
@@ -107,51 +106,26 @@
 				</div>
 			</nav>
 		</div>
-		<!-- table -->
-		<!-- <h1>EVENTS TABLE</h1> -->
-		<br>
-		<table>
-			<thead>
-				<tr>
-					<th >EVENTS</th>
-					<th>USERS</th>
-					<th>EVENT DATE</th>
-					<th>EVENT STATUS</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td data-title="EVENTS">Event1</td>
-					<td data-title="USERS">USERS</td>
-					<td data-title="EVENT DATE">Date</td>
-					<td data-title="EVENT STATUS">ACTIVE/Inactive</td>
-				</tr>
-				<tr>
-					<td data-title="EVENTS">Event2</td>
-					<td data-title="USERS">USERS</td>
-					<td data-title="EVENT DATE">Date</td>
-					<td data-title="EVENT STATUS">ACTIVE/Inactive</td>
-				</tr>
-				<tr>
-					<td data-title="EVENTS">Event3</td>
-					<td data-title="USERS">USERS</td>
-					<td data-title="EVENT DATE">Date</td>
-					<td data-title="EVENT STATUS">ACTIVE/Inactive</td>
-				</tr>
-				<tr>
-					<td data-title="EVENTS">Event4</td>
-					<td data-title="USERS">USERS</td>
-					<td data-title="EVENT DATE">Date</td>
-					<td data-title="EVENT STATUS">ACTIVE/Inactive</td>
-				</tr>
-				<tr>
-					<td data-title="EVENTS">Event5</td>
-					<td data-title="USERS">USERS</td>
-					<td data-title="EVENT DATE">Date</td>
-					<td data-title="EVENT STATUS">ACTIVE/Inactive</td>
-				</tr>
-			</tbody>
-		</table>
+        <div class="hexbody">
+            <div class="hex-container">
+                <div class="hexagonArea first">
+                    <a href="/dash1"><div class="hexagon">
+                        <img src="/img/hackdays_icon.png" alt="">
+                        <h3>HACKDAYS</h3>
+                    </div></a>
+                    <a href="/dash2"><div class="hexagon">
+                        <img src="" alt="">
+                        <h3>EVENT2</h3>
+                    </div></a>
+                </div>    
+                <div class="hexagonArea last">
+                    <a href="/dash3"><div class="hexagon">
+                        <img src="" alt="">
+                        <h3>EVENT3</h3>
+                    </div></a>
+                </div>
+            </div>
+        </div>
         
     </div>    
 	<script src="/js/index.js"></script>

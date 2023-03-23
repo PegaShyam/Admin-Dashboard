@@ -1,0 +1,73 @@
+table{
+    border-collapse:separate;
+    border-spacing:0 15px;
+    margin: 20px;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    text-align: center;
+    background-color: transparent;
+}
+
+table tr{
+    padding: .45em;
+}
+
+thead tr{
+    background-color: rgb(76, 31, 111);
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(255, 156, 184);
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+tbody tr:nth-child(odd){
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+table th,td{
+    font-size: 19px;
+    padding: 1em;
+}
+
+table tr:hover{
+    background-color: rgb(223, 14, 104);
+    color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 0 0 black;
+    transition: 2s ease;
+    padding: 0;
+}
+
+thead th{
+    color: white;
+    font-size: 1.15em;
+}
+
+@media (max-width:440px) {
+    table{
+        border: 3px solid purple;
+    }
+    table thead tr{
+        display: none;
+    }
+    table tr{
+        display: block;
+    }
+    table th,td{
+        padding: 0.5em;
+    }
+
+    table td{
+        text-align: right;
+        display: block;
+        font-size: 1em;
+    }
+
+    table td::before{
+        content: attr(data-title) ": ";
+        float: left;
+    }
+}

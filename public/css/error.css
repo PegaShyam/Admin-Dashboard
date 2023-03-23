@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -400px;
+}
+
+.message-box {
+  min-height: 200px;
+  min-width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: 50px;
+  color: #FFF;
+  font-family: Roboto;
+  font-weight: 300;
+  background-color: rgba(128, 128, 128, 0.155);
+  backdrop-filter: blur(10px);
+  /* box-shadow: 1px 1px 10px 1px black; */
+  /* border: 3px solid rgb(1, 149, 255); */
+  border-radius: 2px;   
+  padding: 20px;
+  animation: shake 1s both;
+  animation-iteration-count: 2;
+}
+
+.message-box h1 {
+  font-size: 60px;
+  line-height: 46px;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.message-box p {
+  color: #000000;
+  font-size: 30px;
+}
+
+.buttons-con .action-link-wrap {
+  margin-top: 40px;
+}
+
+.buttons-con .action-link-wrap .link-button {
+  background: #02f871;
+  padding: 8px 25px;
+  border-radius: 4px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px
+}
+
+.buttons-con .action-link-wrap a:hover {
+  background: #00ffd5;
+  color: #000000;
+}
+
+#Polygon-1,
+#Polygon-2,
+#Polygon-3,
+#Polygon-4,
+#Polygon-4,
+#Polygon-5 {
+  animation: float 1s infinite ease-in-out alternate;
+}
+
+#Polygon-2 {
+  animation-delay: .2s;
+}
+
+#Polygon-3 {
+  animation-delay: .4s;
+}
+
+#Polygon-4 {
+  animation-delay: .6s;
+}
+
+#Polygon-5 {
+  animation-delay: .8s;
+}
+
+@keyframes float {
+  100% {
+      transform: translateY(20px);
+  }
+}
+
+@media (max-width: 800px) {
+  svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -250px;
+      margin-left: -190px;
+  }
+  .message-box {
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -190px;
+      text-align: center;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+ }
