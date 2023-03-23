@@ -6,8 +6,9 @@
 	<meta http-equiv="X-UA-Compatible"content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="/css/profile.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 	<header>
 
 		<div class="logosec">
-			<img src="img/Sellular Logo.png" class="sel1"><div class="logo">SELLULAR</div>
+			<img src="/img/Sellular Logo.png" class="sel1"><div class="logo"><h2>SELLULAR</h2></div>
 			<img src="/img/menu_icon.png"
 				class="icn menuicn"
 				id="menuicn"
@@ -66,11 +67,11 @@
 						<h3>Create Users</h3>
 					</div></a>
 
-					<a href="/report"><div class="nav-option option3">
+					<a href="/verification"><div class="nav-option option3">
 						<img src="/img/report_icon.png"
 							class="nav-img"
 							alt="report">
-						<h3> Report</h3>
+						<h3>Verification</h3>
 					</div></a>
 
 					<a href="/institution"><div class="nav-option option4">
@@ -104,6 +105,55 @@
 				</div>
 			</nav>
 		</div>
-		<script src="/js/index.js"></script>
+		<div class="main">
+
+			<div class="searchbar2">
+				<input type="text"
+					name=""
+					id=""
+					placeholder="Search">
+				<div class="searchbtn">
+				<img src="/img/search_icon.png"
+						class="icn srchicn"
+						alt="search-button">
+				</div>
+			</div>
+
+			<div class="userform">
+				<form>
+				  <h1>PROFILE</h1>
+                  <div class='light x1'></div>
+                  <div class='light x2'></div>
+                  <div class='light x3'></div>
+                  <div class='light x4'></div>
+                  <div class='light x5'></div>
+                  <div class='light x6'></div>
+                  <div class='light x7'></div>
+                  <div class='light x8'></div>
+                  <div class='light x9'></div>
+					<div class="pfp">
+						<img src="/img/profile_icon.png" alt="">
+					</div>
+					<div class="row">
+						<p>NAME:</p><%= text %>
+					</div>
+					<div class="row">
+						<p>EMAIL:</p><%= text %>
+					</div>
+					<div class="row">
+						<p>PHONE:</p><%= text %>
+					</div>
+					<div class="row">
+						<p>INSTITUTION:</p><%= text %>
+					</div>
+					<div class="row2">
+						<input type="submit" value="EDIT PROFILE" class="row1">
+						<input type="submit" value="CHANGE PASSWORD" class="row1">
+					</div>
+
+                </form>
+            </div>
+			
+            <script src="js/index.js"></script>
 </body>
-</html>        
+</html> 

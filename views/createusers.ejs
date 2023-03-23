@@ -6,9 +6,11 @@
 	<meta http-equiv="X-UA-Compatible"content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Admin Dashboard</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
-	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/table.css">
+
+
 </head>
 
 <body>
@@ -67,11 +69,11 @@
 						<h3>Create Users</h3>
 					</div></a>
 
-					<a href="/report"><div class="nav-option option3">
+					<a href="/verification"><div class="nav-option option3">
 						<img src="/img/report_icon.png"
 							class="nav-img"
 							alt="report">
-						<h3> Report</h3>
+						<h3>Verification</h3>
 					</div></a>
 
 					<a href="/institution"><div class="nav-option option4">
@@ -105,69 +107,56 @@
 				</div>
 			</nav>
 		</div>
-		<div class="main">
-
-			<div class="searchbar2">
-				<input type="text"
-					name=""
-					id=""
-					placeholder="Search">
-				<div class="searchbtn">
-				<img src="/img/search_icon.png"
-						class="icn srchicn"
-						alt="search-button">
-				</div>
-			</div>
-
-			<div class="userform">
-				<form>
-                  <div class='light x1'></div>
-                  <div class='light x2'></div>
-                  <div class='light x3'></div>
-                  <div class='light x4'></div>
-                  <div class='light x5'></div>
-                  <div class='light x6'></div>
-                  <div class='light x7'></div>
-                  <div class='light x8'></div>
-                  <div class='light x9'></div>
-					<label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter Name">
-                    
-					<label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter Email">
-                    
-					<label for="dob">Date of Birth</label>
-                    <input type="date" id="dob" placeholder="Enter DOB">
-                    
-					<label for="">Phone</label>
-                    <input type="text" maxlength="10" placeholder="Enter Phone Number">
-                    
-					<label for="">State</label>
-                	<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
-					
-					<label for="">City</label>
-					<select id ="state" class="form-control" required></select>	
-					
-					<label for="">Institution</label>
-					<select id="college" required>
-						<option value="">Select</option>
-						<option value="NIE">The National Institute of Engineering</option>
-					</select>
-					
-					<label for="">Password</label>
-                    <input type="password" minlength="8" placeholder="Enter Password">
-                    
-					<label for="">Confirm Password</label>
-                    <input type="password" minlength="8" placeholder="Confirm Password">
-                    <br>
-					<br>
-                    <input type="submit" id="but1" value="Create">
-
-                </form>
-            </div>
-			
-            <script src="js/index.js"></script>
-			<script src="js/area.js"></script>
-			<script language="javascript">print_state("sts");</script>
+		<!-- table -->
+		<!-- <h1>EVENTS TABLE</h1> -->
+		<br>
+		<table>
+			<thead>
+				<tr>
+					<th>NAME</th>
+					<th>INSTITUTION</th>
+					<th>ID STATUS</th>
+					<th>ADMIN</th> 
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+                    <td data-title="Name">Name1</td>
+					<td data-title="Institution">Institution1</td>
+					<td data-title="ID_Status">Valid</td>
+					<td data-title="Admin"><button class="buttonX">ADD</button></td>
+				</tr>
+				<tr>
+                    <td data-title="Name">Name2</td>
+					<td data-title="Institution">Institution2</td>
+					<td data-title="ID_Status">Invalid</td>
+					<td data-title="Admin"><button class="buttonX">ADD</button></td>
+				</tr>
+                <tr>
+                    <td data-title="Name">Name3</td>
+					<td data-title="Institution">Institution3</td>
+					<td data-title="ID_Status">Pending</td>
+					<td data-title="Admin"><button class="buttonX">ADD</button></td>
+				</tr>
+                <tr>
+                    <td data-title="Name">Name4</td>
+					<td data-title="Institution">Institution4</td>
+					<td data-title="ID_Status">Pending</td>
+					<td data-title="Admin"><button class="buttonX">ADD</button></td>
+				</tr>
+                <tr>
+                    <td data-title="Name">Name5</td>
+					<td data-title="Institution">Institution5</td>
+					<td data-title="ID_Status">Pending</td>
+					<td data-title="Admin"><button class="buttonX">ADD</button></td>
+				</tr>
+                  
+                
+			</tbody>
+		</table>
+        
+    </div>    
+	<script src="/js/index.js"></script>
 </body>
-</html> 
+</html>
+

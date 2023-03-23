@@ -75,3 +75,84 @@ thead th{
     }
 
 }
+
+.buttonX{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    min-width: 120px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(50, 27, 104);
+    box-shadow: 2px 2px 3px 0 rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 10px;
+}
+
+.buttonX:hover{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    min-width: 120px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 3px 0 rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.8s ease;
+}
+
+.buttonX1{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    min-width: 120px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(5, 161, 62);
+    box-shadow: 2px 2px 3px 0 rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 10px;
+}
+
+.buttonX1:hover{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    min-width: 120px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 3px 0 rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.8s ease;
+}
+
+.buttonX2{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    min-width: 120px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(203, 11, 11);
+    box-shadow: 2px 2px 3px 0 rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 10px;
+}
+
+.buttonX2:hover{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    min-width: 120px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 3px 0 rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.8s ease;
+}
