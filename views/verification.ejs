@@ -122,47 +122,70 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-                    <td data-title="Name">Name1</td>
-					<td data-title="Institution">Institution1</td>
-                    <td data-title="ID_front">Front Image</td>
-					<td data-title="ID_back">Back Image</td>
-					<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
-                    <td data-title="Reject"><button class="buttonX2">REJECT</button></td>
-				</tr>
-				<tr>
-                    <td data-title="Name">Name2</td>
-					<td data-title="Institution">Institution2</td>
-                    <td data-title="ID_front">Front Image</td>
-					<td data-title="ID_back">Back Image</td>
-					<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
-                    <td data-title="Reject"><button class="buttonX2">REJECT</button></td>
-                </tr>
-                <tr>
-                    <td data-title="Name">Name3</td>
-					<td data-title="Institution">Institution3</td>
-                    <td data-title="ID_front">Front Image</td>
-					<td data-title="ID_back">Back Image</td>
-					<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
-                    <td data-title="Reject"><button class="buttonX2">REJECT</button></td>
-				</tr>
-                <tr>
-                    <td data-title="Name">Name4</td>
-					<td data-title="Institution">Institution4</td>
-                    <td data-title="ID_front">Front Image</td>
-					<td data-title="ID_back">Back Image</td>
-					<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
-                    <td data-title="Reject"><button class="buttonX2">REJECT</button></td>
-				</tr>
-                <tr>
-                    <td data-title="Name">Name5</td>
-					<td data-title="Institution">Institution5</td>
-                    <td data-title="ID_front">Front Image</td>
-					<td data-title="ID_back">Back Image</td>
-					<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
-                    <td data-title="Reject"><button class="buttonX2">REJECT</button></td>
-				</tr>
-                
+				<% if(users.length>0) { %>
+					<% users.forEach(user =>{ %>
+						<!--need to adjust styling here-->
+						<tr>
+							<td data-title="Name"><%= user.name %></td>
+							<td data-title="Institution"><%= user.collegeId %></td>
+							<td data-title="ID_front">Front Image</td>
+							<td data-title="ID_back">Back Image</td>
+							<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
+							<td data-title="Reject"><button class="buttonX2">REJECT</button></td>
+						</tr>
+					<% })  } else {%>
+						<!--style this-->
+                     <h3>No users </h3>
+					 <% } %>  
+					 <tr>
+						<td data-title="Name">Name</td>
+						<td data-title="Institution">College name</td>
+						<td data-title="ID_front">Front Image</td>
+						<td data-title="ID_back">Back Image</td>
+						<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
+						<td data-title="Reject"><button class="buttonX2">REJECT</button></td>
+					</tr>
+					<tr>
+						<td data-title="Name">Name</td>
+						<td data-title="Institution">College name</td>
+						<td data-title="ID_front">Front Image</td>
+						<td data-title="ID_back">Back Image</td>
+						<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
+						<td data-title="Reject"><button class="buttonX2">REJECT</button></td>
+					</tr>
+					<tr>
+						<td data-title="Name">Name</td>
+						<td data-title="Institution">College name</td>
+						<td data-title="ID_front">Front Image</td>
+						<td data-title="ID_back">Back Image</td>
+						<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
+						<td data-title="Reject"><button class="buttonX2">REJECT</button></td>
+					</tr>
+					<tr>
+						<td data-title="Name">Name</td>
+						<td data-title="Institution">College name</td>
+						<td data-title="ID_front">Front Image</td>
+						<td data-title="ID_back">Back Image</td>
+						<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
+						<td data-title="Reject"><button class="buttonX2">REJECT</button></td>
+					</tr>
+					<tr>
+						<td data-title="Name">Name</td>
+						<td data-title="Institution">College name</td>
+						<td data-title="ID_front">Front Image</td>
+						<td data-title="ID_back">Back Image</td>
+						<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
+						<td data-title="Reject"><button class="buttonX2">REJECT</button></td>
+					</tr>
+					<tr>
+						<td data-title="Name">Name</td>
+						<td data-title="Institution">College name</td>
+						<td data-title="ID_front">Front Image</td>
+						<td data-title="ID_back">Back Image</td>
+						<td data-title="Accept"><button class="buttonX1">ACCEPT</button></td>
+						<td data-title="Reject"><button class="buttonX2">REJECT</button></td>
+					</tr>
+					              
 			</tbody>
 		</table>
         

@@ -23,7 +23,12 @@ exports.login = (req, res,next) => {
         password:''
     })
 }
-
+exports.logout = (req,res,next)=>{
+    req.session.destroy(err => {
+        console.log(err)
+        res.redirect('/')
+    })
+}
 exports.dashboard = (req,res,next)=>{
     res.render('index.ejs')
 }
@@ -109,7 +114,7 @@ if(password == confirm){
             to: req.body.email,
             from: process.env.MAIL_FROM,
             subject: "Signup confirmation",
-            text: " WE are so happy that you chose our service",
+            text: " WE are so happy that you chose our service.Sellular team welcomes you!",
             html: `<h1>Hey user these are your credentials</h1>
     <ul>
     <li><h3>User name: ${req.body.name}</h3></li>
@@ -179,5 +184,117 @@ exports.validateUser = async (req,res,next)=>{
     catch(err){
         console.log(err)
         res.render('500.ejs')
+    }
+}
+exports.profile = async(req,res,next)=>{
+    let uid = req.session.userId;
+    let User = await user.find({_id:uid}).select({'name':1,'email':1,'phone':1,'collegeId':1})
+    if(User.length>0){
+        User = User[0];
+    res.render('profile.ejs',{
+        username:User.name,
+        email:User.email,
+        phone:User.phone,
+        college:User.collegeId
+    })
+}
+else{
+    res.status(500).render('500.ejs')
+}
+}
+exports.editProfile= async (req,res,next)=>{
+    let uid = req.session.userId;
+    let User = await user.find({_id:uid})
+    if(User.length>0){
+        User=User[0]
+    res.render('editProfile.ejs',{
+        name:User.name,
+        email:User.email,
+        dob:User.dob,
+        phone:User.phone,
+        state:User.state,
+        city:User.city,
+        college:User.collegeId
+    })
+    }
+    else{
+        res.status(500).render('500.ejs')
+    }
+}
+
+//password change
+
+exports.changePassword = (req,res,next)=>{
+    res.render('confirm_update.ejs',{title:'change password',err:''})
+}
+exports.confirmUpdate= async(req,res,next)=>{
+try{
+    let password = req.body.password;
+let uid = req.session.userId
+let User = await user.find({_id:uid}).select({password:1,_id:-1})
+if(User.length>0){
+    let oldPass=User[0].password;
+    let matched = await bcrypt.compare(password,oldPass)
+    if(matched){
+        res.render('changepassword.ejs',{title:"update password",err:''})
+    }
+    else{
+        res.render('confirm_update.ejs',{title:'change password',err:'wrong password'})
+    }
+}
+else{
+    res.render('500.ejs')
+}
+}
+catch(err){
+    console.log(err);
+    res.render('500.ejs')
+}
+},
+exports.updatePassword = async(req,res,next)=>{
+    try{
+        const errors = validationResult(req).errors
+    if(errors.length>0){
+        res.render('changepassword.ejs',{title:'change password',err:errors[0]})
+    }
+    let id = req.session.userId;
+    let User = await user.find({_id:id}).select({password:1,_id:-1})
+    let old_pass = User[0].password;
+    let password = req.body.password;
+    //  new password should not be same as old password
+    let matched = await bcrypt.compare(password,old_pass)
+    if(matched){
+        res.render('changepassword.ejs',{title:'change password',err:'new password should not be the old password'})
+    }
+    let new_pass = await bcrypt.hash(password,13);
+
+     await user.updateOne({_id:id},{
+        password:new_pass
+    })
+    res.redirect('/profile')
+    }
+catch(err){
+    console.log(err)
+    res.render('500.ejs')
+}
+    
+}
+
+//forgot password
+exports.forgot1=(req,res,next)=>{
+    res.render('forgotpwd1.ejs',{title:'forgot password',err:''})
+}
+exports.confirmMail= async(req,res,next)=>{
+    let mail = req.body.email
+    let User = await user.find({email:mail})
+    if(User.length>0){
+     //will sen a verfication code to user and after verfying will redirect them to passwor change page
+   let mailed = await transporter.sendMail(mailOptions)
+     if(mailed)res.render('forgotpwd1.ejs',{title:'forgot password',err:'A mail is sent to change password'})
+     else res.render('500.ejs')
+    }
+    else{
+       console.log('no user exists')
+        res.render('forgotpwd1.ejs',{title:'forgot password',err:'this email does not exists'})
     }
 }

@@ -135,20 +135,20 @@
 						<img src="/img/profile_icon.png" alt="">
 					</div>
 					<div class="row">
-						<p>NAME:</p><%= text %>
+						<p>NAME:<%= username %> </p>
 					</div>
 					<div class="row">
-						<p>EMAIL:</p><%= text %>
+						<p>EMAIL: <%= email %> </p>
 					</div>
 					<div class="row">
-						<p>PHONE:</p><%= text %>
+						<p>PHONE: <%= phone %> </p>
 					</div>
 					<div class="row">
-						<p>INSTITUTION:</p><%= text %>
+						<p>INSTITUTION: <%= college %> </p>
 					</div>
 					<div class="row2">
-						<input type="submit" value="EDIT PROFILE" class="row1">
-						<input type="submit" value="CHANGE PASSWORD" class="row1">
+						<a href="/editProfile" style="text-decoration: none;" class="row1">Edit profile</a>
+						<a href="/change_pass1" style="text-decoration: none;" class="row1">Change Password</a>
 					</div>
 
                 </form>

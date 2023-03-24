@@ -120,6 +120,19 @@
 				</tr>
 			</thead>
 			<tbody>
+				<% if(users.length>0) { %>
+					<% users.forEach(user =>{ %>
+						<!--need to adjust styling here-->
+						<tr>
+							  <td data-title="Name"><%= user.name %></td>
+					<td data-title="Institution"><%= user.collegeId %></td>
+					<td data-title="ID_Status"><%= user.verified %></td>
+					<td data-title="Admin"><button class="buttonX">ADD</button></td>
+						</tr>
+					<% })  } else {%>
+						<!--style this-->
+                     <h3>No users </h3>
+					 <% } %> 
 				<tr>
                     <td data-title="Name">Name1</td>
 					<td data-title="Institution">Institution1</td>

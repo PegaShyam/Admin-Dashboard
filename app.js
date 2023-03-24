@@ -39,7 +39,7 @@ app.use(general_routes)
 
 //Listen on port 3000
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, })
     .then(user => {
         console.log({level:'info',message:'connnected to the mongodb server sucessfully! and listening on port:3000'})
         app.listen(3000)

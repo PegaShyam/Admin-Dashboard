@@ -120,7 +120,7 @@
 			</div>
 
 			<div class="userform">
-				<form>
+				<form action="/updateProfile" method="POST">
                   <div class='light x1'></div>
                   <div class='light x2'></div>
                   <div class='light x3'></div>
@@ -132,16 +132,16 @@
                   <div class='light x9'></div>
                   <h1>Edit Profile</h1>
 					<label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter Name">
+                    <input type="text" id="name" placeholder="Enter Name" value="<%= name %>">
                     
 					<label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter Email">
+                    <input type="email" id="email" placeholder="Enter Email" value="<%= email %>">
                     
 					<label for="dob">Date of Birth</label>
                     <input type="date" id="dob" placeholder="Enter DOB">
                     
 					<label for="">Phone</label>
-                    <input type="text" maxlength="10" placeholder="Enter Phone Number">
+                    <input type="text" maxlength="10" placeholder="Enter Phone Number" value="<%= phone %>">
                     
 					<label for="">State</label>
                 	<select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>

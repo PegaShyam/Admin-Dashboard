@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> <%= title  %>  </title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="/css/form.css">
+</head>
+
+<body>
+    <header>
+
+		<div class="logosec">
+			<img src="/img/Sellular Logo.png" class="sel1"><div class="logo"><h2>SELLULAR</h2></div>
+			<img src="/img/menu_icon.png"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon">
+		</div>
+
+		<div class="searchbar">
+			<input type="text"
+				placeholder="Search">
+			<div class="searchbtn">
+			<img src="/img/search_icon.png"
+					class="icn srchicn"
+					alt="search-icon">
+			</div>
+		</div>
+
+		<div class="message">
+			<div class="circle"></div>
+			<img src="/img/bell_icon.png"
+				class="icn"
+				alt="">
+			<div class="dp">
+			<img src="/img/profile_icon.png"
+					class="dpicn"
+					alt="dp">
+			</div>
+		</div>
+
+	</header>
+
+	<div class="main-container">
+		<div class="navcontainer">
+			<nav class="nav">
+				<div class="nav-upper-options">
+					
+					<a href="/dashboard"><div class="nav-option option1">
+						<img src="/img/dashboard_icon.png"
+							class="nav-img"
+							alt="dashboard">
+						<h3> Dashboard</h3>
+					</div></a>
+
+					<a href="/createusers"><div class="nav-option option2">
+						<img src="/img/user_plus_icon.png"
+							class="nav-img"
+							alt="articles">
+						<h3>Create Users</h3>
+					</div></a>
+
+					<a href="/verification"><div class="nav-option option3">
+						<img src="/img/report_icon.png"
+							class="nav-img"
+							alt="report">
+						<h3>Verification</h3>
+					</div></a>
+
+					<a href="/institution"><div class="nav-option option4">
+						<img src="/img/inst_icon.png"
+							class="nav-img"
+							alt="institution">
+						<h3> Institution</h3>
+					</div></a>
+
+					<a href="/profile"><div class="nav-option option5">
+						<img src="/img/profile_icon.png"
+							class="nav-img"
+							alt="blog">
+						<h3>Profile</h3>
+					</div></a>
+
+					<a href="/settings"><div class="nav-option option6">
+						<img src="/img/settings_icon.png"
+							class="nav-img"
+							alt="settings">
+						<h3> Settings</h3>
+					</div></a>
+
+					<a href="/login"><div class="nav-option logout">
+						<img src="/img/logout_icon.png"
+							class="nav-img"
+							alt="logout">
+						<h3>Logout</h3>
+					</div></a>
+
+				</div>
+			</nav>
+		</div>
+
+			<div class="userform">
+				<form method="POST" action="/change_pass">
+                    <div class='light x1'></div>
+                  <div class='light x2'></div>
+                  <div class='light x3'></div>
+                  <div class='light x4'></div>
+                  <div class='light x5'></div>
+                  <div class='light x6'></div>
+                  <div class='light x7'></div>
+                  <div class='light x8'></div>
+                  <div class='light x9'></div>
+                <div class="title1"><span><img class="logo1" src="/img/Sellular Logo.png">SELLULAR&nbsp;&nbsp;</span></div>
+                <br>    
+                    <!-- <h1>Set your New Password.</h1> -->
+					<p class="txt2">Set your New Password.</p>
+					<label for="password">Enter New Password</label>
+                    <input type="password" name="password" minlength="8" placeholder="Enter Current Password" required>
+                    <br>
+					<br>
+                    <button type="submit" id="but1" >Change Password</button>
+					<br>
+
+                </form>
+            </div>
+			
+            <script src="/js/index.js"></script>
+</body>
+</html> 

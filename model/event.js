@@ -28,6 +28,10 @@ const eventSchema = new Schema({
       type:mongoose.Types.ObjectId,
       ref:'User',
       require:true
+   },
+   status:{
+    type:String,
+    enum:['active','inactive']
    }
 
 })

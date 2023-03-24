@@ -18,7 +18,7 @@ router.get('/signup',user_controller.signup)
 
 router.get('/profile', user_controller.profile)
 
-
+router.get('/logout',user_controller.logout);
 
 router.post('/signup',[
   check('name').custom(async(value,{req})=>{
@@ -56,4 +56,21 @@ router.post('/signup',[
     }),
 ],user_controller.createUser)
 router.post('/login',user_controller.validateUser)
+
+router.get('/profile',user_controller.profile)
+router.get('/editProfile',user_controller.editProfile)
+router.get('/change_pass1',user_controller.changePassword)
+router.post('/change_pass',user_controller.confirmUpdate)
+router.post('/updatePassword',[ check('password', '5') 
+.isLength({ min: 10 })
+.trim() 
+,body('confirm').custom((value, { req }) => {
+    if (value === req.body.password) {
+        return true
+    } else
+        throw new Error('6')
+})],user_controller.updatePassword)
+
+router.get('/forgot1',user_controller.forgot1)
+router.post('/confirm_mail',user_controller.confirmMail)
 module.exports = router;
