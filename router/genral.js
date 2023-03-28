@@ -1,13 +1,20 @@
 const express = require('express')
-
+const isAuth = require('../middleware/isAuth')
 const router = express.Router()
 const controller = require('../controller/general')
-
-router.get('/dashboard',controller.dashboard)
-router.get('/dash1',controller.dash1)
-router.get('/dash2',controller.dash2)
-router.get('/dash3',controller.dash3)
-router.get('/institution',controller.institute)
-router.get('/createusers',controller.createUser)
-router.get('/verification',controller.verification)
+// add auth middleware to private routes
+// and csurf after testing  
+router.get('/dashboard',isAuth,controller.dashboard)
+router.get('/dash1',isAuth,controller.dash1)
+router.get('/dash2',isAuth,controller.dash2)
+router.get('/dash3',isAuth,controller.dash3)
+router.get('/institution',isAuth,controller.institute)
+router.get('/createusers',isAuth,controller.createUser)
+router.get('/verification',isAuth,controller.verification)
+router.get('/sales',isAuth,controller.sales)
+router.get('/ecom',isAuth,controller.ecom)
+router.get('/events',isAuth,controller.events)
+router.get('/user-growth',isAuth,controller.userGrowth)
+router.get('/sales-college',isAuth,controller.salesCollege)
+router.get('/user-college',isAuth,controller.userCollege)
 module.exports = router

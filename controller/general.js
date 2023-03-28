@@ -47,3 +47,27 @@ exports.verification=async (req,res,next)=>{
         res.render('500.ejs')
     }
 }
+
+exports.sales = async(req,res,next)=>{
+    res.render('sales_dash.ejs',{title:'Sales',name:req.session.username})
+}
+exports.ecom = async(req,res,next)=>{
+    res.render('ecom-dash.ejs',{title:'E-commerce',name:req.session.username})
+}
+exports.events = async(req,res,next)=>{
+    res.render('events-dash.ejs',{title:'Events',name:req.session.username})
+}
+exports.userGrowth = async(req,res,next)=>{
+    res.render('user-dash.ejs',{title:'Userbase',name:req.session.username})
+}
+
+exports.salesCollege = async(req,res,next)=>{
+    res.render('sales-dash-college.ejs',{title:'Sales:Name of college',name:req.session.username})
+}
+
+exports.userCollege = async(req,res,next)=>{
+    res.render('user-dash-college.ejs',{
+        title:'Users:Name of collge',
+        name:req.session.username
+    })
+}

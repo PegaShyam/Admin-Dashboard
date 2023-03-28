@@ -1,5 +1,5 @@
 const express = require('express')
-
+const isAuth = require('../middleware/isAuth')
 const router = express.Router();
 
 const general_controller = require('../controller/general')
@@ -16,9 +16,9 @@ router.get('/login', user_controller.login)
 
 router.get('/signup',user_controller.signup)
 
-router.get('/profile', user_controller.profile)
+router.get('/profile', isAuth,user_controller.profile)
 
-router.get('/logout',user_controller.logout);
+router.get('/logout',isAuth,user_controller.logout);
 
 router.post('/signup',[
   check('name').custom(async(value,{req})=>{
@@ -57,11 +57,11 @@ router.post('/signup',[
 ],user_controller.createUser)
 router.post('/login',user_controller.validateUser)
 
-router.get('/profile',user_controller.profile)
-router.get('/editProfile',user_controller.editProfile)
-router.get('/change_pass1',user_controller.changePassword)
-router.post('/change_pass',user_controller.confirmUpdate)
-router.post('/updatePassword',[ check('password', '5') 
+router.get('/profile',isAuth,user_controller.profile)
+router.get('/editProfile',isAuth,user_controller.editProfile)
+router.get('/change_pass1',isAuth,user_controller.changePassword)
+router.post('/change_pass',isAuth,user_controller.confirmUpdate)
+router.post('/updatePassword',isAuth,[ check('password', '5') 
 .isLength({ min: 10 })
 .trim() 
 ,body('confirm').custom((value, { req }) => {

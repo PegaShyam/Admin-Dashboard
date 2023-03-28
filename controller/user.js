@@ -144,19 +144,17 @@ exports.validateUser = async (req,res,next)=>{
     try{
         let result = await user.find({name:name})
         if(result.length > 0){
-            console.log(result[0])
         req.body.id = result[0]._id;
         let matched = await bcrypt.compare(password, result[0].password)
         if(matched == true){
-            console.log('user is verified')
             const user_id = req.body.id;
             req.body.id = -1;
-            req.session.isloggedIn = true
-            req.session.userId = user_id
+            req.session.isLoggedIn = true
+            req.session.username = result[0].name
+            req.session.userId = result[0]._id
             res.redirect(`/dashboard`)
         }
         else{
-            console.log('wrong password')
         req.flash('errorpswd', 'Wrong password') //this method is now available in our app
                                 //this metod takes a key value pair
                                 //new we need to register in the page which will be rendered
@@ -169,7 +167,6 @@ exports.validateUser = async (req,res,next)=>{
         }
     }
     else{
-        console.log('no such user exists')
         req.flash('username', 'No such user found!!') //this method is now available in our app
         //this metod takes a key value pair
         //new we need to register in the page which will be rendered
@@ -182,7 +179,6 @@ exports.validateUser = async (req,res,next)=>{
     }
     }
     catch(err){
-        console.log(err)
         res.render('500.ejs')
     }
 }
