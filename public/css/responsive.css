@@ -160,28 +160,3 @@
     }
     }
     
-/* Responsive code for profile.ejs */
-@media screen and (min-width:320px) and (max-width:380px){
-    .row2 a{
-        font-size: 18px;
-    }
-}
-@media screen and (min-width:320px) and (max-width:449px){
-    .userform h1{
-        font-size: 46px;
-    }
-    .pfp p{
-        font-size: 36px;
-    }.row p{
-        font-size: 20px;
-    }
-}
-@media screen and (min-width:320px) and (max-width:660px){
-    .pfp{
-        flex-direction: column;
-        top: -120px;
-    }
-    .userform h1{
-        height: 180px;
-    }
-}
