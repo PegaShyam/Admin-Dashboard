@@ -3,13 +3,15 @@
 }
 .userform{
   background-color: white;
+  position: relative;
+  top: -85px;
 }
 .userform h1{
   background: linear-gradient(90.07deg, #B40C66 1.74%, rgba(43, 106, 106, 0.914616) 45.15%, rgba(11, 159, 159, 0.65));
   color: white;
   padding: 10px;
   text-align: center;
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 300;
 }
 .pfp{
@@ -17,7 +19,7 @@
   justify-content: start;
   align-items: center;
   position: relative;
-  top: -50px;
+  top: -65px;
 }
 .pfp img{
   width: 200px;
@@ -27,7 +29,7 @@
   border: solid black 1px;
 }
 .pfp p{
-  font-size: 46px;
+  font-size: 35px;
 }
 .row{
   padding: 30px;
@@ -47,8 +49,14 @@
   text-decoration: none;
   font-size: 20px;
 }
-
-/* Responsive code for profile.ejs */
+.row2 a:hover{
+  text-decoration: underline !important;
+}
+@media screen and (min-width:320px) and (max-width:990px){
+  .userform{
+      top: 0px;
+  }
+}
 @media screen and (min-width:320px) and (max-width:380px){
   .row2 a{
       font-size: 18px;
@@ -56,10 +64,11 @@
 }
 @media screen and (min-width:320px) and (max-width:449px){
   .userform h1{
-      font-size: 46px;
+      font-size: 35px;
+      padding-left: 35px;
   }
   .pfp p{
-      font-size: 36px;
+      font-size: 28px;
   }.row p{
       font-size: 20px;
   }
@@ -71,5 +80,9 @@
   }
   .userform h1{
       height: 180px;
+  }
+  .pfp img{
+      width: 150px;
+      height: 150px;
   }
 }
