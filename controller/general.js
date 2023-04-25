@@ -83,3 +83,10 @@ exports.userCollege = async (req, res, next) => {
     name: req.session.username,
   });
 };
+
+exports.collegeadmin = async (req, res, next) => {
+  res.render("collegeadmin.ejs", {
+    title: "College Admins",
+    name: req.session.username,
+  });
+};

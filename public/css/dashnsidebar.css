@@ -278,7 +278,7 @@ body {
   width: 400px;
   height: 250px;
   margin: 30px;
-  border: 2px solid rgb(0, 0, 0);
+  /* border: 2px solid rgb(0, 0, 0); */
   border-radius: 20px;
   text-align: center;
   font-size: 25px;
