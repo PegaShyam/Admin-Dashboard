@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: rgb(5, 125, 125);
+  border-left: 10px solid rgb(5, 125, 125);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navigation.active {
+  width: 75px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 200%;
+  list-style: none;
+  transition: 0.5s;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: rgb(70, 70, 70);
+  transition: 0.5s;
+  /* border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px; */
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+.navigation ul li a {
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: rgb(255, 255, 255);
+}
+
+.navigation ul li a .icon,
+.icon1 {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 90px;
+  text-align: center;
+}
+
+.navigation ul li a .icon img {
+  height: 40px;
+}
+
+.navigation ul li a .icon1 img {
+  height: 50px;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px rgb(255, 255, 255);
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px white;
+  pointer-events: none;
+}
+
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: white;
+  transition: 0.5s;
+  align-items: center;
+  justify-content: center;
+}
+
+.main.active {
+  width: calc(100% - 75px);
+  left: 75px;
+}
+
+.main img {
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Responsive Sellular Title */
+
+.header-title {
+  color: rgb(255, 255, 255);
+  margin: auto;
+  font-size: 25px;
+  display: block;
+  text-align: left;
+}
+
+.header-title .icon2 {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 90px;
+}
+
+.header-title .icon2 img {
+  height: 50px;
+  width: 44px;
+}
+
+.header-title .title2 {
+  position: relative;
+  display: block;
+  padding: 0 5px;
+  height: 60px;
+  line-height: 60px;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 22px;
+}
+
+.header-title {
+  display: none;
+}
+
+/* Menu Toggler */
+
+.toggle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  font-size: 2.5em;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.toggle {
+  display: none;
+}
+
+/* Search Bar */
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 45px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.search label img {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 25px;
+}
+
+/* Profile icon */
+
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5 cards */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 250px;
+  margin: 30px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  box-shadow: 0 7px 25px rgb(167, 167, 167);
+  cursor: pointer;
+}
+
+.card-image {
+  background-color: aqua;
+  height: 170px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.car-1 {
+  background-image: url(/img/BuySell.jpg);
+}
+
+.car-2 {
+  background-image: url(/img/ecom.jpg);
+}
+
+.car-3 {
+  background-image: url(/img/events.jpg);
+}
+
+.car-4 {
+  background-image: url(/img/users.jpg);
+}
+
+.car-5 {
+  background-image: url(/img/college1.jpg);
+}
+
+/* 3 lines to X */
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.nav-toggle .bar {
+  height: 4px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: all 100ms ease-in-out;
+}
+
+.nav-toggle:hover {
+  cursor: pointer;
+}
+
+.x:nth-of-type(1) {
+  transition: all 100ms ease-in-out;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 40px;
+}
+
+.x:nth-of-type(2) {
+  transition: all 100ms ease-in-out;
+  transform-origin: center;
+  width: 0;
+}
+
+.x:nth-of-type(3) {
+  transition: all 100ms ease-in-out;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  width: 40px;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+  .card {
+    height: 240px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .toggle {
+    display: block;
+  }
+
+  .topbar {
+    background: rgb(5, 125, 125);
+  }
+
+  .navigation {
+    left: -300px;
+  }
+
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+
+  .card {
+    height: 240px;
+    width: 300px;
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+
+  .main.active {
+    left: 300px;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .header-title {
+    display: flex;
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    height: 230px;
+    width: 220px;
+    font-size: 16px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 230px;
+    width: 160px;
+    font-size: 16px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-title {
+    display: flex;
+  }
+
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+
+  .topbar {
+    background: rgb(5, 125, 125);
+  }
+
+  .toggle {
+    z-index: 10001;
+    display: block;
+  }
+
+  .main.active .toggle {
+    position: fixed;
+  }
+
+  .main img {
+    height: 35px;
+  }
+}
+
+/* @media (max-width: 991px)
+{
+    .graphBox{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+} */

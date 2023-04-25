@@ -1,8 +1,28 @@
-let menuicn = document.querySelector(".menuicn");
-let nav = document.querySelector(".navcontainer");
+// let menuicn = document.querySelector(".menuicn");
+// let nav = document.querySelector(".navcontainer");
 
-menuicn.addEventListener("click",()=>
-{
-	nav.classList.toggle("navclose");
-})
+// menuicn.addEventListener("click", () => {
+//   nav.classList.toggle("navclose");
+// });
 
+//menu toggle
+
+let toggle = document.querySelector(".toggle");
+let navigation = document.querySelector(".navigation");
+let main = document.querySelector(".main");
+
+toggle.onclick = function () {
+  navigation.classList.toggle("active");
+  main.classList.toggle("active");
+};
+
+// hovered list
+
+// let list = document.querySelectorAll('.navigation li');
+// function activeLink(){
+//     list.forEach((item)=>
+//     item.classList.remove('hovered'));
+//     this.classList.add('hovered');
+// }
+// list.forEach((item)=>
+// item.addEventListener('mouseover',activeLink));
