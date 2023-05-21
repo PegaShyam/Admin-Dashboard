@@ -1,88 +1,218 @@
-.main{
-  padding: 5px;
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&family=Space+Grotesk:wght@300;400&display=swap');
+:root{
+  --black: #000000;
+  --grey: #000000a8;
+  --white: #ffffff;
+  --green: #057d7d;
 }
-.userform{
-  background-color: white;
-  position: relative;
-  top: -85px;
-}
-.userform h1{
-  background: linear-gradient(90.07deg, #B40C66 1.74%, rgba(43, 106, 106, 0.914616) 45.15%, rgba(11, 159, 159, 0.65));
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 300;
-}
-.pfp{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  position: relative;
-  top: -65px;
-}
-.pfp img{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 20px;
-  border: solid black 1px;
-}
-.pfp p{
-  font-size: 35px;
-}
-.row{
-  padding: 30px;
-  position: relative;
-  top: -80px;
-}
-.row p{
-  font-size: 28px;
-}
-.row2{
-  padding: 30px;
+
+.topna{
+  margin-left: 75px;
   display: flex;
   justify-content: space-between;
+  color: var(--green);
 }
-.row2 a{
-  color: #038181;
-  text-decoration: none;
+.topna p{
+  padding: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.topna .right-nav{
+  padding: 20px;
+}
+.right-nav{
+  display: flex;
+}
+.pro {
+  display: flex;
+}
+.pro p{
+  padding: 0px;
+  padding: 0px 10px;
+}
+.pro img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0px 10px;
+  margin-top: 3px;
+}
+
+.main{
+  margin-left: 75px;
+  display: flex;
+}
+.container:hover ~ div {
+  margin-left: 250px;
+  transition: all 1s ease;
+}
+.profile{
+  position: fixed;
+  /* width: 380px; */
+  /* height: 100vh; */
+  padding: 30px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--black);
+  font-weight: 400;
+}
+.pic{
+  text-align: center;
+}
+.pic p{
+  text-transform: uppercase;
+  margin: 20px;
   font-size: 20px;
 }
-.row2 a:hover{
-  text-decoration: underline !important;
+.pic img{
+  width: 120px;
+  height: 120px;
+  margin-top: 40px;
 }
-@media screen and (min-width:320px) and (max-width:990px){
-  .userform{
-      top: 0px;
+.icons{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 2px;
+}
+.icons button{
+  outline: none;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 1s;
+}
+.icons button:hover, .change button:hover{
+  background-color: var(--white);
+  color: var(--green);
+  box-shadow: rgba(5, 122, 122, 0.35) 0px 5px 15px;
+}
+ion-icon {
+  width: 25px;
+  height: 25px;
+}
+.details{
+  margin: 20px;
+}
+.details p{
+  font-size: 15px;
+  margin: 10px;
+}
+.details p span{
+  color: var(--grey);
+  font-size: 15px;
+}
+.change{
+  display: flex;
+  justify-content: space-evenly;
+}
+.change button{
+  padding: 10px;
+  outline: none;
+  margin: 20px 8px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+  transition-duration: 1s;
+  border-radius: 10px;
+}
+.sub-sections{
+  font-family: 'Space Grotesk', sans-serif;
+  margin-left: 380px;
+  border-left: solid 1px #00000028;
+}
+.sub-sections ul{
+  margin-left: 10px;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+}
+.sub-sections ul li{
+  margin: 20px;
+  color: var(--grey);
+  font-size: 18px;
+  cursor: pointer;
+  padding-bottom: 15px;
+  width: fit-content;
+  border-bottom-width: 3.1px;
+  border-bottom-style: solid;
+  border-color: var(--white);
+}
+.sub-active{
+  border-color: var(--green) !important;
+  color: var(--black) !important;
+}
+.tasks, .history{
+  display: none;
+}
+
+.team{
+  margin: 15px;
+  padding: 15px;
+  border-left: solid 1px #00000028;
+  position: relative;
+}
+.team .title {
+  display: flex;
+  justify-content: space-between;
+  color: var(--grey);
+}
+.team .title p{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.team ion-icon{
+  position: absolute;
+  top: -10px;
+  padding: 5px;
+  left: -10px;
+  color: var(--white);
+  background-color: var(--green);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.team .text{
+  font-size: 15px;
+}
+@media screen and (min-width:320px) and (max-width:450px){
+  .profile{
+    padding: 15px;
+  }
+  .details {
+    margin: 5px;
+  }
+  .details p{
+    margin: 0px;
+  }
+  .icons button{
+    padding: 8px;
+  }
+  .pic img{
+    width: 80px;
+    height: 80px;
+  }
+  .sub-sections ul{
+    margin-left: 10px;
+  }
+  .sub-sections ul li{
+    margin: 10px;
+  }
+  .team {
+    margin: 15px;
   }
 }
-@media screen and (min-width:320px) and (max-width:380px){
-  .row2 a{
-      font-size: 18px;
+@media screen and (min-width:320px) and (max-width:790px){
+  .profile{
+    position: initial;
   }
-}
-@media screen and (min-width:320px) and (max-width:449px){
-  .userform h1{
-      font-size: 35px;
-      padding-left: 35px;
+  .main{
+    flex-direction: column;
   }
-  .pfp p{
-      font-size: 28px;
-  }.row p{
-      font-size: 20px;
-  }
-}
-@media screen and (min-width:320px) and (max-width:660px){
-  .pfp{
-      flex-direction: column;
-      top: -120px;
-  }
-  .userform h1{
-      height: 180px;
-  }
-  .pfp img{
-      width: 150px;
-      height: 150px;
+  .sub-sections{
+    margin-left: 0px;
   }
 }
