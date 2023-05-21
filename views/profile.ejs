@@ -1,25 +1,201 @@
 <%- include('partials/headerAndNav.ejs') %>
-        <div class="userform">
-            <form>
-              <h1>Tech Team</h1>
-                <div class="pfp">
-                    <img src="/img/profile_icon.png" alt="">
-                    <p>NAME:<%= username %> </p>
+<%- include('partials/topnav.ejs') %>
+    <div class="main">
+        <div class="profile">
+            <div class="pic">
+                <img src="/img/profile_icon.png" alt="Profile Pic">
+                <p><%= username %> </p>
+            </div>
+            <div class="icons">
+                <button>
+                    <ion-icon name="call-outline"></ion-icon>
+                </button>
+                <button>
+                    <ion-icon name="mail-outline"></ion-icon>
+                </button>
+                <button>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="details">
+                <p><span>Phone:</span> <%= phone %> </p>
+                <p><span>Email:</span> <%= email %> </p>
+                <p><span>Institution:</span> <%= college %> </p>
+            </div>
+            <div class="change">
+                <button>Change Password</button>
+                <button>Change Details</button>
+            </div>
+        </div>
+        <div class="sub-sections">
+            <ul>
+                <li id="teams" class="sub-active">Teams</li>
+                <li id="tasks">Tasks</li>
+                <li id="history">History</li>
+            </ul>
+            <div class="teams">
+                <div class="team">
+                    <div class="title">
+                        <p>Team</p>
+                        <p>Time</p>
+                    </div>
+                    <ion-icon name="attach-outline"></ion-icon>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
                 </div>
-                <div class="row">
-					<p>EMAIL: <%= email %> </p>
-					<p>PHONE: <%= phone %> </p>
-                    <p>INSTITUTION: <%= college %> </p>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <ion-icon name="bonfire-outline"></ion-icon>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
                 </div>
-                <div class="row2">
-                    <a href="/editProfile" class="row1">Edit profile</a>
-                    <a href="/change_pass1" class="row1">Change Password</a>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <ion-icon name="color-filter-outline"></ion-icon>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
                 </div>
-
-            </form>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <ion-icon name="flower-outline"></ion-icon>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="team">
+                    <div class="title">
+                        <p>Tasks</p>
+                        <p>Time</p>
+                    </div>
+                    <ion-icon name="git-branch-outline"></ion-icon>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <ion-icon name="snow-outline"></ion-icon>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+            </div>
+            <div class="history">
+                <div class="team">
+                    <div class="title">
+                        <p>History</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+                <div class="team">
+                    <div class="title">
+                        <p>Title</p>
+                        <p>Time</p>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat soluta omnis dolores, possimus vitae facere eos iure cumque ex provident at </p>
+                </div>
+            </div>
         </div>
     </div>
-
-
-    </div>
+    <script>
+        var hist=document.querySelector("#history")
+        var teams=document.querySelector("#teams")
+        var tasks=document.querySelector("#tasks")
+        teams.addEventListener("click",()=>{
+            teams.classList.add("sub-active")
+            tasks.classList.remove("sub-active")
+            hist.classList.remove("sub-active")
+            document.querySelector(".teams").style.display="block"
+            document.querySelector(".tasks").style.display="none"
+            document.querySelector(".history").style.display="none"
+        })
+        tasks.addEventListener("click",()=>{
+            tasks.classList.add("sub-active")
+            teams.classList.remove("sub-active")
+            hist.classList.remove("sub-active")
+            document.querySelector(".tasks").style.display="block"
+            document.querySelector(".teams").style.display="none"
+            document.querySelector(".history").style.display="none"
+        })
+        hist.addEventListener("click",()=>{
+            hist.classList.add("sub-active")
+            tasks.classList.remove("sub-active")
+            teams.classList.remove("sub-active")
+            document.querySelector(".history").style.display="block"
+            document.querySelector(".tasks").style.display="none"
+            document.querySelector(".teams").style.display="none"
+        })
+    </script>
 <%- include('partials/footer.ejs') %>
+
+<!-- <div class="userform">
+    <form>
+      <h1>Tech Team</h1>
+        <div class="pfp">
+            <img src="/img/profile_icon.png" alt="">
+            <p>NAME:<%= username %> </p>
+        </div>
+        <div class="row">
+            <p>EMAIL: <%= email %> </p>
+            <p>PHONE: <%= phone %> </p>
+            <p>INSTITUTION: <%= college %> </p>
+        </div>
+        <div class="row2">
+            <a href="/editProfile" class="row1">Edit profile</a>
+            <a href="/change_pass1" class="row1">Change Password</a>
+        </div>
+
+    </form>
+</div>
+</div>
+
+
+</div> -->

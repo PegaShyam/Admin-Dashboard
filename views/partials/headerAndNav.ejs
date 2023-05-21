@@ -12,95 +12,125 @@
   <div class="container">
     <div class="navigation">
       <ul>
-        <li>
-          <a href="#">
+        <li class="logo">
             <span class="icon1"
               ><img src="/img/Sellular Logo.png" alt=""
             /></span>
+          <a href="#">
             <span class="title">SELLULAR</span>
           </a>
         </li>
         <li>
           <a href="/dashboard">
             <!-- <span class="icon"><img src="/img/dashboard_icon.png" alt=""></span> -->
-            <span class="title">Dashboard</span>
+            <ion-icon name="grid-outline"></ion-icon>
+            <span>Dashboard
+              <span class="active active1"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="#">
             <!-- <span class="icon"><img src="/img/profile_icon.png" alt=""></span> -->
-            <span class="title">Events</span>
+            <ion-icon name="calendar-outline"></ion-icon>
+            <span>Events
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="#">
             <!-- <span class="icon"><img src="/img/eye_icon.png" alt=""></span> -->
-            <span class="title">Products</span>
+            <ion-icon name="cube-outline"></ion-icon>
+            <span>Products
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="#">
             <!-- <span class="icon"><img src="/img/settings_icon.png" alt=""></span> -->
-            <span class="title">Buy and Sell</span>
+            <ion-icon name="cart-outline"></ion-icon>
+            <span>Buy and Sell
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="#">
             <!-- <span class="icon"><img src="/img/settings_icon.png" alt=""></span> -->
-            <span class="title">Colleges</span>
+            <ion-icon name="school-outline"></ion-icon>
+            <span>Colleges
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="#">
             <!-- <span class="icon"><img src="/img/settings_icon.png" alt=""></span> -->
-            <span class="title">Users</span>
+            <ion-icon name="people-outline"></ion-icon>
+            <span>Users
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="/verification">
             <!-- <span class="icon"><img src="/img/settings_icon.png" alt=""></span> -->
-            <span class="title">Verification</span>
+            <ion-icon name="checkmark-done-outline"></ion-icon>
+            <span>Verification
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="/createusers">
             <!-- <span class="icon"><img src="/img/settings_icon.png" alt=""></span> -->
-            <span class="title">College Admin</span>
+            <ion-icon name="person-add-outline"></ion-icon>
+            <span>College Admin
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="/profile">
             <!-- <span class="icon"><img src="/img/lock_icon.png" alt=""></span> -->
-            <span class="title">User</span>
+            <ion-icon name="person-outline"></ion-icon>
+            <span>User
+              <span class="active"></span>
+            </span>
           </a>
         </li>
         <li>
           <a href="/login">
             <!-- <span class="icon"><img src="/img/logout_icon.png" alt=""></span> -->
-            <span class="title">Log Out</span>
+            <ion-icon name="log-out-outline"></ion-icon>
+            <span>Log Out
+              <span class="active"></span>
+            </span>
           </a>
         </li>
       </ul>
     </div>
 
-    <div class="main">
-    <div class="topbar">
+    <!-- <div class="main">
+    <div class="topbar"> -->
       <!-- Menu Toggler -->
 
-      <div class="toggle">
+      <!-- <div class="toggle">
         <div><i class="switch" id="icon"></i></div>
         <a class="nav-toggle">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </a>
-        <!-- <img src="/img/menu_icon.png" alt=""> -->
-      </div>
+        <img src="/img/menu_icon.png" alt="">
+      </div> -->
 
-      <div class="header-title">
+      <!-- <div class="header-title">
         <span class="icon2"><img src="/img/Sellular Logo.png" alt="" /></span>
         <span class="title2">SELLULAR</span>
-      </div>
+      </div> -->
 
       <!-- Search Bar -->
 
@@ -116,4 +146,29 @@
       <!-- <div class="user">
                     <img src="/img/profile_icon.png" alt="">
                 </div> -->
-    </div>
+  </div>
+  <script>
+    var nav=document.querySelector(".logo span img");
+    nav.addEventListener("click", function() {
+      document.querySelector(".navigation").classList.toggle("focus");
+      });
+
+    var options=document.querySelectorAll(".navigation a");
+    var spans=document.querySelectorAll(".navigation a span span");
+    // console.log(options)
+    // console.log(spans)
+    for (let i = 0; i < options.length; i++) {
+      options[i].addEventListener("click", (e)=>{
+        // e.childNode.classList.add("active1");
+        for (let j = 1; j < options.length; j++) {
+          options[j].children[1].children[0].classList.remove("active1");
+          // console.log(options[j].children[1].children[0])
+          // options[j].children[1].children[0].classList.remove("active1")
+        }
+        options[i].children[1].children[0].classList.add("active1");
+      });
+    }
+  </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- </body> -->
